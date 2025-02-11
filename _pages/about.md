@@ -2,33 +2,23 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: Warsaw, Poland. adam.kaniasty@gmail.com. Passionate about building AI solutions that bridge technology and human needs.
 
 profile:
   align: right
-  image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
+  image: personal/me.jpg
+  image_circular: false
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>adam.kaniasty@gmail.com</p>
+    <p>Warsaw, Poland</p>
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
+news: true # includes a list of news items
+selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
-
-announcements:
-  enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
-
-latest_posts:
-  enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I am Adam Kaniasty, a co-founder and CTO of APPI, where I lead AI and ML projects that push the boundaries of what technology can do for industries like construction and architecture. My current focus is on developing intelligent systems that improve information retrieval using RAG techniques. Recently, I've also worked on a Kubernetes pod autoscaling project using RL models.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+I’m currently pursuing a Bachelor's degree in Data Science at the Warsaw University of Technology. Throughout my academic and professional career, I have contributed to several key projects, including the development of terrain segmentation models for space probes, sentiment analysis tools, and even reinforcement learning models designed to conquer video game levels.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+Beyond tech, I’m passionate about sports—training tennis and martial arts keeps me sharp. I also enjoy sharing my knowledge, mentoring AI enthusiasts, and speaking at events like No Code Days and university AI clubs.
