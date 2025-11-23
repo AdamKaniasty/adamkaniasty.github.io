@@ -8,7 +8,7 @@ middle_name:
 last_name: Kaniasty
 email: adam.kaniasty@gmail.com
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Experienced MLOps and ML Engineer. Co-Founder of APPI
+  Software Engineer at Box. Experienced ML Engineer and Data Scientist. Former Co-Founder and CTO of APPI.
 footer_text:
 keywords: [ "appi", "appi-marketplace", "kaniasty", "machine-learning", "artificial-intelligence", "NLP", "RAG", "FastAPI", "React", "Docker", "TensorFlow", "PyTorch", "GPT", "LlamaIndex", "LangChain" ]
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
