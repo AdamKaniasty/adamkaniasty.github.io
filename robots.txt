@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://adamkaniasty.github.io//sitemap.xml
+Sitemap: https://adamkaniasty.com/sitemap.xml
