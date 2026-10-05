@@ -1,14 +1,17 @@
 ---
 layout: page
 permalink: /repositories/
-title: repositories
+title: Open Source
+description: Source repositories for Adam Kaniasty’s open-source and university projects, including Mi-Crow, RL Doom and CanSat terrain classification.
 nav: true
 nav_order: 4
 ---
 
 {% if site.data.repositories.github_users %}
 
-## GitHub users
+[Engineering case studies]({{ "/projects/" | relative_url }}) explain the architecture and my role in these projects.
+
+## GitHub profile
 
 <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
   {% for user in site.data.repositories.github_users %}

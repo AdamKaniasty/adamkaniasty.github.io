@@ -37,12 +37,10 @@
       {% if include.width %}
         width="{{ include.width }}"
       {% else %}
-        width="100%"
+        style="width: 100%; height: auto;"
       {% endif %}
       {% if include.height %}
         height="{{ include.height }}"
-      {% else %}
-        height="auto"
       {% endif %}
       {% if include['min-width'] or include['min-height'] or include['max-width'] or include['max-height'] %}
         style="
@@ -60,8 +58,10 @@
           {% endif %}
         "
       {% endif %}
-      {% if include.alt %}
-        alt="{{ include.alt }}"
+      alt="{{ include.alt | default: '' | escape }}"
+      decoding="async"
+      {% if include.fetchpriority %}
+        fetchpriority="{{ include.fetchpriority }}"
       {% endif %}
       {% if include.title %}
         title="{{ include.title }}"

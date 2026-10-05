@@ -12,6 +12,8 @@ on:
       - "**.html"
       - "**.js"
       - "**.liquid"
+      - "**.py"
+      - "robots.txt"
       - "**/*.md"
       - "**.yml"
       - "Gemfile"
@@ -40,6 +42,8 @@ on:
       - "**.html"
       - "**.js"
       - "**.liquid"
+      - "**.py"
+      - "robots.txt"
       - "**/*.md"
       - "**.yml"
       - "Gemfile"
@@ -93,6 +97,7 @@ jobs:
           export JEKYLL_ENV=production
           bundle exec jekyll build
           python3 _scripts/check_navbar_links.py _site
+          python3 _scripts/check_seo.py _site
       - name: Purge unused CSS 🧹
         run: |
           npm install -g purgecss

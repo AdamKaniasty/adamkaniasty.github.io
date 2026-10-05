@@ -1,17 +1,35 @@
 ---
-layout: page
-title: xLungs
+layout: project
+title: xLungs — Medical Imaging Inference Application
+slug: xlungs
 permalink: /projects/xlungs/
-description: Java + React application for AI model inference and CT image analysis
-importance: 3
-category: work
-related_publications: false
+description: Java Spring and React application coordinating CT image processing, model inference and radiology reports through RabbitMQ on GPU-powered Kubernetes.
+importance: 2
+selected: true
+related_projects: [kubernetes-autoscaling, mi-crow]
 ---
 
-**xLungs** is a medical imaging research project from the MI².AI team at Warsaw University of Technology, focused on AI-assisted analysis of chest CT scans. The team developed **CTSegMate**, a model trained using approximately 40,000 CT studies, to support clinicians in analysing anatomical structures and disease-related changes.
+## What did the xLungs application do?
 
-I created the **Java + React fullstack application that performed inference for the model**, connecting the research system to a web interface for radiologists. My work covered a **Java Spring backend** and a **React TypeScript frontend**, supporting CT image processing, organ segmentation, and report generation.
+xLungs is a medical imaging research project from MI².AI at Warsaw University of Technology. I created the Java and React application that connected the model's inference pipeline to an interface for radiologists.
 
-The application coordinated a multistep inference pipeline using **RabbitMQ**. I deployed and tested it on a **GPU-powered Kubernetes cluster**, integrating model inference with the application's processing and reporting workflow.
+## My role
 
-Read more about the research and its clinical goals in [ITwiz's coverage of xLungs](https://itwiz.pl/xlungs-polscy-naukowcy-stworzyli-model-ai-ktory-moze-zrewolucjonizowac-diagnostyke-chorob-pluc/).
+My work covered the Java Spring backend, React TypeScript frontend, inference integration, deployment and testing on a GPU-powered Kubernetes cluster during 2024–2025.
+
+## Architecture and implementation
+
+The application coordinated CT image processing, organ segmentation and report generation through a multistep RabbitMQ inference pipeline. The backend and frontend connected that processing workflow to the radiologist-facing application.
+
+## Technologies
+
+Java, Spring, React, TypeScript, RabbitMQ and Kubernetes with GPU infrastructure.
+
+## Research evidence
+
+I co-authored the ISD2025 poster _Radiomic Medical Data Transformation for Radiologists Support_. It describes image conversion, segmentation, feature extraction and report rendering. The paper reports 89.09% DICE across five organs and processing in under five and a half minutes. These are results of the published research system, rather than separate measurements of my web application.
+
+## Links
+
+- [Publication, authors and DOI]({{ '/publications/' | relative_url }}#radiomic-medical-data)
+- [Primary publication record](https://aisel.aisnet.org/isd2014/proceedings2025/transformation/28/)

@@ -1,28 +1,39 @@
 ---
-layout: page
-title: Mi-Crow
+layout: project
+title: Mi-Crow — Mechanistic Interpretability for LLMs
+slug: mi-crow
 permalink: /projects/mi-crow/
-description: Engineering thesis on mechanistic interpretability for large language models
-importance: 2
-category: work
+description: Python library connecting sparse autoencoder training, activation analysis, concept discovery and language-model steering.
+importance: 1
+selected: true
 github: https://github.com/mi-crow-team/Mi-Crow
-related_publications: false
+contributors: [Hubert Kowalski]
+programming_languages: [Python]
+related_projects: [rl-doom, appi-marketplace]
 ---
 
-**Mi-Crow** is a Python library for investigating how large language models work internally. I developed it with Hubert Kowalski as part of my engineering thesis at the Faculty of Mathematics and Information Science, Warsaw University of Technology.
+## What is Mi-Crow?
 
-The project connects activation analysis, concept discovery, and model steering in a unified research workflow. Sparse autoencoders extract interpretable features from model activations, while activation hooks let researchers observe and modify model behavior.
+Mi-Crow is a Python library for mechanistic interpretability experiments on large language models. It connects activation analysis, concept discovery and model steering in a unified research workflow.
 
-Mi-Crow supports:
+## My role
 
-- A consistent interface for Hugging Face language models.
-- Training sparse autoencoders, including TopK and L1 variants.
-- Capturing and manipulating activations through detectors and controllers.
-- Discovering learned concepts and using them to steer model outputs.
-- Storing tensors and experiment metadata for large-scale research workflows.
+I co-developed Mi-Crow with Hubert Kowalski for our engineering thesis at Warsaw University of Technology. Vladimir Zaigrajew and Przemysław Biecek supervised the thesis.
 
-The library uses **Python, PyTorch, Transformers, Accelerate, and Datasets**, with example notebooks and documentation for interpretability experiments.
+## Architecture and implementation
 
-The thesis was supervised by Vladimir Zaigrajew and Przemysław Biecek.
+A unified Hugging Face model interface connects to activation hooks. Detectors observe activations; controllers modify model behavior. Sparse autoencoders, including TopK and L1 variants, extract features for concept exploration and steering. Tensor storage and experiment metadata support the research workflow.
 
-Explore the [GitHub repository](https://github.com/mi-crow-team/Mi-Crow) and [project documentation](https://mi-crow-team.github.io/Mi-Crow/).
+## Technologies
+
+Python, PyTorch, Transformers, Accelerate and Datasets.
+
+## Reproducing an experiment
+
+The source repository and documentation include notebooks for training an autoencoder, collecting activating texts, and loading concepts. Use their current setup instructions and model requirements when reproducing an experiment.
+
+## Links
+
+- [Mi-Crow source code](https://github.com/mi-crow-team/Mi-Crow)
+- [Mi-Crow documentation and examples](https://mi-crow-team.github.io/Mi-Crow/)
+- [Research and thesis context]({{ '/publications/' | relative_url }})

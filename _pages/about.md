@@ -1,26 +1,47 @@
 ---
 layout: about
-title: about
+title: About
+heading: Adam Kaniasty — Software Engineer
 permalink: /
-subtitle: Warsaw, Poland. adam.kaniasty@gmail.com. Passionate about building AI solutions that bridge technology and human needs.
-
+schema_type: ProfilePage
+description: Adam Kaniasty is a software engineer at Google working on agent development, with experience in RAG, machine learning, Java backends and cloud infrastructure.
+subtitle: Software engineering, AI agents and machine learning systems.
 profile:
   align: right
   image: personal/me.jpg
   image_circular: false
   more_info: >
-    <p>adam.kaniasty@gmail.com</p>
     <p>Warsaw, Poland</p>
-
-news: true # includes a list of news items
-selected_papers: false # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+    <p><a href="mailto:adam.kaniasty@gmail.com">Email Adam</a></p>
+social: false
 ---
 
-I am Adam Kaniasty, a Software Engineer at Google and part of the Agent Development Lifecycle team.
+I am a **Software Engineer at {{ site.data.resume.work.first.name }}**, on the Agent Development Lifecycle team. My work spans AI agents, document retrieval, machine learning pipelines and backend applications.
 
-Previously, I worked as a Software Engineer at Box, where our team created a workflow platform with its own expression language, as a Data Scientist at Capgemini, and as an ML Software Engineer at Mi2.AI, developing fullstack applications for agentic systems and medical imaging platforms.
+I work with **Python, Java, React TypeScript and cloud infrastructure**, including Azure, GCP and Kubernetes. My projects range from knowledge graph-based RAG to reinforcement learning for autoscaling and medical imaging inference.
 
-I co-founded and served as CTO of APPI (2023-2025), building knowledge graph-based RAG systems, and spent nearly three years at Nokia working on reinforcement learning models for Kubernetes autoscaling and ML pipelines.
+[GitHub](https://github.com/AdamKaniasty) · [LinkedIn](https://www.linkedin.com/in/adam-kaniasty/) · [Experience and CV]({{ '/cv/' | relative_url }})
 
-I completed my Bachelor's degree in Data Science at the Warsaw University of Technology and am now pursuing a Master's degree in Data Science at the same university. Beyond tech, I'm passionate about sports—training tennis and martial arts—and enjoy sharing knowledge through mentoring and speaking at AI events.
+<section aria-labelledby="selected-projects">
+<h2 id="selected-projects">Selected projects</h2>
+<ul class="selected-work">
+{% assign selected_projects = site.projects | where: 'selected', true | sort: 'importance' %}
+{% for project in selected_projects %}
+<li><a href="{{ project.url | relative_url }}"><strong>{{ project.title }}</strong></a> — {{ project.description }}</li>
+{% endfor %}
+</ul>
+<p><a href="{{ '/projects/' | relative_url }}">Explore all engineering projects</a></p>
+</section>
+
+<section aria-labelledby="about-adam">
+<h2 id="about-adam">About Adam</h2>
+<p>Previously, I built a Java and GraphQL workflow platform at Box, an agentic claims application at Capgemini, and medical imaging applications at MI².AI. As APPI's co-founder and CTO, I developed knowledge graph-based retrieval systems. At Nokia, I worked on reinforcement learning for Kubernetes pod autoscaling and configurable ML training pipelines.</p>
+<p>I completed a bachelor's degree in Data Science at Warsaw University of Technology and am pursuing a master's degree in Data Science there. Outside engineering, I train tennis and martial arts.</p>
+<p><a href="{{ '/cv/' | relative_url }}#work">Professional experience</a> · <a href="{{ '/cv/' | relative_url }}#education">Education</a> · <a href="{{ "/news/" | relative_url }}">Professional updates</a></p>
+</section>
+
+<section aria-labelledby="research-teaching">
+<h2 id="research-teaching">Research and teaching</h2>
+<p>I co-developed Mi-Crow with Hubert Kowalski for our engineering thesis and co-authored a 2025 publication on radiomic data transformation for radiologists. <a href="{{ '/publications/' | relative_url }}">Read the publication and related research</a>.</p>
+<p>I have given talks on RAG, fine-tuning and embeddings, and mentored AI teams at BEST Hacking League. <a href="{{ '/talks/' | relative_url }}">Talks and mentoring</a>.</p>
+</section>

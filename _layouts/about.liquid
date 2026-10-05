@@ -4,7 +4,9 @@ layout: default
 <div class="post">
   <header class="post-header">
     <h1 class="post-title">
-      {% if site.title == 'blank' %}
+      {% if page.heading %}
+        {{ page.heading }}
+      {% elsif site.title == 'blank' %}
         <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
         {{ site.last_name }}
       {% else %}
@@ -26,10 +28,10 @@ layout: default
       rounded' %}
           {% endif %}
           {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
-      30vw, 95vw"{% endcapture %}
+      30vw, 95vw{% endcapture %}
           {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
-            cache_bust=true
+            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt="Adam Kaniasty"
+            width="762" height="1016" fetchpriority="high" cache_bust=true
           %}
         {% endif %}
         {% if page.profile.more_info %}

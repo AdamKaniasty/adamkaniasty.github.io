@@ -4,8 +4,8 @@
     "label": "Software Engineer & ML Engineer",
     "image": "",
     "email": "adam.kaniasty@gmail.com",
-    "url": "https://github.com/AdamKaniasty",
-    "summary": "Software Engineer on Google's Agent Development Lifecycle team, passionate about AI, ML, and building state-of-the-art systems. Experienced in fullstack development, ML engineering, and cloud infrastructure. Completed a Bachelor's degree in Data Science at Warsaw University of Technology and now pursuing a Master's degree in Data Science at the same university.",
+    "url": "https://adamkaniasty.com/",
+    "summary": "Software Engineer on Google's Agent Development Lifecycle team, with experience in AI agents, knowledge graph-based RAG, machine learning pipelines, Java backends and cloud infrastructure. Completed a bachelor's degree in Data Science at Warsaw University of Technology and pursuing a master's degree there.",
     "location": {
       "address": "Warsaw",
       "postalCode": "00-001",
@@ -42,7 +42,12 @@
       "startDate": "2025-09-01",
       "endDate": "2026-09",
       "summary": "Worked with the team to create a workflow platform with its own expression language.",
-      "highlights": ["Workflow platform development", "Platform with its own expression language", "Java + GraphQL backend development", "GCP cloud infrastructure"]
+      "highlights": [
+        "Workflow platform development",
+        "Platform with its own expression language",
+        "Java + GraphQL backend development",
+        "GCP cloud infrastructure"
+      ]
     },
     {
       "name": "Capgemini",
@@ -60,7 +65,14 @@
       "startDate": "2024-10-01",
       "endDate": "2025-06-01",
       "summary": "Designed fullstack webapp for cancer prediction models, with multistep inference logic using RabbitMQ. Implemented Java Spring backend and React TS frontend. Deployed and tested the system on GPU powered kubernetes cluster.",
-      "highlights": ["Fullstack webapp development", "Java Spring backend", "React TypeScript frontend", "RabbitMQ message queue", "GPU powered Kubernetes deployment", "Cancer prediction ML models"]
+      "highlights": [
+        "Fullstack webapp development",
+        "Java Spring backend",
+        "React TypeScript frontend",
+        "RabbitMQ message queue",
+        "GPU powered Kubernetes deployment",
+        "Cancer prediction ML models"
+      ]
     },
     {
       "name": "APPI",
@@ -69,7 +81,12 @@
       "startDate": "2023-02-01",
       "endDate": "2025-02-01",
       "summary": "Designed and created knowledge graph based RAG system, using LlamaIndex, Langchain and Pinecone, to parse, retrieve and evaluate context from documents. Deployed with FastAPI on Azure.",
-      "highlights": ["Knowledge graph based RAG system", "LlamaIndex and LangChain integration", "Pinecone vector database", "FastAPI deployment on Azure"]
+      "highlights": [
+        "Knowledge graph based RAG system",
+        "LlamaIndex and LangChain integration",
+        "Pinecone vector database",
+        "FastAPI deployment on Azure"
+      ]
     },
     {
       "name": "Nokia",
@@ -78,7 +95,15 @@
       "startDate": "2022-07-01",
       "endDate": "2025-07-01",
       "summary": "Designed, created and deployed reinforced learning (DDQN), PyTorch deep learning and tuned open source time series prediction models for kubernetes pod autoscaling. Designed and implemented automatic, configurable training pipelines and MIFlow based model registries on remote GPU powered remote lab. Configured Jenkins pipelines for CI/CD and Helm charts for Openshift labs.",
-      "highlights": ["Reinforcement learning (DDQN) models", "PyTorch deep learning", "Time series prediction models", "Kubernetes pod autoscaling", "MIFlow model registry", "Jenkins CI/CD pipelines", "Helm charts for Openshift"]
+      "highlights": [
+        "Reinforcement learning (DDQN) models",
+        "PyTorch deep learning",
+        "Time series prediction models",
+        "Kubernetes pod autoscaling",
+        "MIFlow model registry",
+        "Jenkins CI/CD pipelines",
+        "Helm charts for Openshift"
+      ]
     }
   ],
   "education": [
@@ -115,12 +140,19 @@
         "Unified Hugging Face model interface",
         "Python, PyTorch, and Transformers"
       ],
-      "url": "https://github.com/mi-crow-team/Mi-Crow"
+      "url": "/projects/mi-crow/"
     },
     {
       "name": "xLungs",
       "summary": "Created a Java + React fullstack application that performed inference for the xLungs medical imaging model, supporting CT image processing, organ segmentation, and report generation for radiologists.",
-      "highlights": ["Java Spring backend", "React TypeScript frontend", "Model inference integration", "Multistep inference pipeline with RabbitMQ", "GPU-powered Kubernetes deployment", "CT image processing and report generation"],
+      "highlights": [
+        "Java Spring backend",
+        "React TypeScript frontend",
+        "Model inference integration",
+        "Multistep inference pipeline with RabbitMQ",
+        "GPU-powered Kubernetes deployment",
+        "CT image processing and report generation"
+      ],
       "startDate": "2024-10-01",
       "endDate": "2025-06-01",
       "url": "/projects/xlungs/"
@@ -131,30 +163,32 @@
       "highlights": ["Integrated React, FastAPI, and MongoDB", "Leveraged LlamaIndex and LangChain for document processing"],
       "startDate": "2023-02-01",
       "endDate": "2025-02-01",
-      "url": "https://github.com/AdamKaniasty"
+      "url": "/projects/appi-synapse/"
     },
     {
       "name": "APPI Marketplace",
       "summary": "AI agent platform designed for technical and engineering documents, with a focus on advanced, reliable retrieval and document-grounded responses.",
-      "highlights": ["Knowledge graph-based RAG for document retrieval", "Context retrieval and evaluation for AI agents", "LlamaIndex, LangChain, and Pinecone", "FastAPI backend deployed on Azure"],
+      "highlights": [
+        "Knowledge graph-based RAG for document retrieval",
+        "Context retrieval and evaluation for AI agents",
+        "LlamaIndex, LangChain, and Pinecone",
+        "FastAPI backend deployed on Azure"
+      ],
       "startDate": "2023-02-01",
       "endDate": "2025-02-01",
-      "url": "https://github.com/AdamKaniasty"
+      "url": "/projects/appi-marketplace/"
     },
     {
       "name": "Terrain Segmentation Models",
-      "summary": "Developed terrain segmentation models for the CanSat competition using PyTorch and transfer learning with ResNet12.",
-      "startDate": "2022-01-01",
-      "endDate": "2022-12-01",
-      "url": "https://github.com/AdamKaniasty"
+      "summary": "Developed terrain image-processing models as a member of the Project Trailblazer CanSat team; source notebooks and example outputs are available in the project case study.",
+      "url": "/projects/cansat-terrain/"
     }
   ],
   "awards": [
     {
       "title": "CanSat Finalist",
-      "date": "2022-12-01",
       "awarder": "CanSat",
-      "summary": "Finalist in the CanSat competition for developing terrain segmentation models using PyTorch."
+      "summary": "Finalist in the CanSat competition."
     }
   ],
   "skills": [

@@ -1,0 +1,31 @@
+---
+layout: default
+---
+<article class="post project-detail">
+  <nav aria-label="Breadcrumb" class="breadcrumbs">
+    <a href="{{ '/' | relative_url }}">Adam Kaniasty</a> / <a href="{{ '/projects/' | relative_url }}">Projects</a> / <span>{{ page.title }}</span>
+  </nav>
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <p class="post-description">{{ page.description }}</p>
+  </header>
+  {{ content }}
+  {% if page.related_projects %}
+    <aside aria-labelledby="related-projects">
+      <h2 id="related-projects">Related work</h2>
+      <ul>
+        {% for slug in page.related_projects %}
+          {% assign related = site.projects | where: 'slug', slug | first %}
+          {% if related %}
+            <li>
+              <a href="{{ related.url | relative_url }}">{{ related.title }}</a> — {{ related.description }}
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </aside>
+  {% endif %}
+  <p>
+    <a href="{{ '/cv/' | relative_url }}">Adam Kaniasty's experience and education</a> · <a href="{{ '/projects/' | relative_url }}">All projects</a>
+  </p>
+</article>

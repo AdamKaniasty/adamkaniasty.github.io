@@ -4,7 +4,7 @@
     <li class="list-group-item">
       <div class="row">
         <div class="col-xs-2 cl-sm-2 col-md-2 text-center date-column">
-          {% if content.startDate %}
+          {% if content.startDate and content.startDate != '' %}
             {% assign startDate = content.startDate | split: '-' | slice: 0, 2 | join: '.' %}
             {% assign endDate = content.endDate | split: '-' | slice: 0, 2 | join: '.' | default: 'Present' %}
             {% assign date = startDate | append: ' - ' %}
@@ -33,11 +33,15 @@
           </table>
         </div>
         <div class="col-xs-10 cl-sm-10 col-md-10 mt-2 mt-md-0">
-          <h6 class="title font-weight-bold ml-1 ml-md-4">
-            <a href="{{ content.url }}">{{ content.position }}</a>
-          </h6>
-          <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">{{ content.organization }}</h6>
-          <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic">{{ content.summary }}</h6>
+          <h3 class="title font-weight-bold ml-1 ml-md-4">
+            {% if content.url != '' and content.url -%}
+              <a href="{{ content.url }}">{{ content.position }}</a>
+            {%- else -%}
+              {{- content.position -}}
+            {%- endif %}
+          </h3>
+          <p class="ml-1 ml-md-4" style="font-size: 0.95rem">{{ content.organization }}</p>
+          <p class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic">{{ content.summary }}</p>
           <ul class="items">
             {% for item in content.highlights %}
               <li>
