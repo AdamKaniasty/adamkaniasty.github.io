@@ -92,6 +92,7 @@ jobs:
           pip3 install --upgrade nbconvert
           export JEKYLL_ENV=production
           bundle exec jekyll build
+          python3 _scripts/check_navbar_links.py _site
       - name: Purge unused CSS 🧹
         run: |
           npm install -g purgecss

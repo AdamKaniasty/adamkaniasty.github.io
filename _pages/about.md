@@ -17,8 +17,10 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-I am Adam Kaniasty, a Software Engineer at Box, working on Java + GraphQL backend for workflow automation platforms. Previously, I worked as a Data Scientist at Capgemini and as an ML Software Engineer at Mi2.AI, developing fullstack applications for agentic systems and medical imaging platforms.
+I am Adam Kaniasty, a Software Engineer at Google and part of the Agent Development Lifecycle team.
+
+Previously, I worked as a Software Engineer at Box, where our team created a workflow platform with its own expression language, as a Data Scientist at Capgemini, and as an ML Software Engineer at Mi2.AI, developing fullstack applications for agentic systems and medical imaging platforms.
 
 I co-founded and served as CTO of APPI (2023-2025), building knowledge graph-based RAG systems, and spent nearly three years at Nokia working on reinforcement learning models for Kubernetes autoscaling and ML pipelines.
 
-I'm currently pursuing a Bachelor's degree in Data Science at the Warsaw University of Technology. Beyond tech, I'm passionate about sports—training tennis and martial arts—and enjoy sharing knowledge through mentoring and speaking at AI events.
+I completed my Bachelor's degree in Data Science at the Warsaw University of Technology and am now pursuing a Master's degree in Data Science at the same university. Beyond tech, I'm passionate about sports—training tennis and martial arts—and enjoy sharing knowledge through mentoring and speaking at AI events.

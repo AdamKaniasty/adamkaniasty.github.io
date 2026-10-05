@@ -8,14 +8,14 @@ middle_name:
 last_name: Kaniasty
 email: adam.kaniasty@gmail.com
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Software Engineer at Box. Experienced ML Engineer and Data Scientist. Former Co-Founder and CTO of APPI.
+  Software Engineer on Google's Agent Development Lifecycle team. Experienced ML Engineer and Data Scientist. Master's student in Data Science at Warsaw University of Technology. Former Co-Founder and CTO of APPI.
 footer_text:
 keywords: [ "appi", "appi-marketplace", "kaniasty", "machine-learning", "artificial-intelligence", "NLP", "RAG", "FastAPI", "React", "Docker", "TensorFlow", "PyTorch", "GPT", "LlamaIndex", "LangChain" ]
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
-url: https://adamkaniasty.github.io # the base hostname & protocol for your site
-baseurl: / # the subpath of your site, e.g. /blog/. Leave blank for root
+url: https://adamkaniasty.com # the base hostname & protocol for your site
+baseurl: "" # the subpath of your site, e.g. /blog/. Leave blank for root
 last_updated: false # set to true if you want to display last updated in the footer
 impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 back_to_top: true # set to false to disable the back to top button

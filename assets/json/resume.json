@@ -5,7 +5,7 @@
     "image": "",
     "email": "adam.kaniasty@gmail.com",
     "url": "https://github.com/AdamKaniasty",
-    "summary": "Software Engineer at Box, passionate about AI, ML, and building state-of-the-art systems. Experienced in fullstack development, ML engineering, and cloud infrastructure.",
+    "summary": "Software Engineer on Google's Agent Development Lifecycle team, passionate about AI, ML, and building state-of-the-art systems. Experienced in fullstack development, ML engineering, and cloud infrastructure. Completed a Bachelor's degree in Data Science at Warsaw University of Technology and now pursuing a Master's degree in Data Science at the same university.",
     "location": {
       "address": "Warsaw",
       "postalCode": "00-001",
@@ -17,7 +17,7 @@
       {
         "network": "LinkedIn",
         "username": "adam-kaniasty",
-        "url": "https://www.linkedin.com/in/adam-kaniasty-35a5a21a6/"
+        "url": "https://www.linkedin.com/in/adam-kaniasty/"
       },
       {
         "network": "GitHub",
@@ -28,13 +28,21 @@
   },
   "work": [
     {
+      "name": "Google",
+      "position": "Software Engineer",
+      "url": "https://www.google.com/",
+      "startDate": "2026-10",
+      "endDate": "Present",
+      "summary": "Software Engineer on the Agent Development Lifecycle team at Google."
+    },
+    {
       "name": "Box",
       "position": "Software Engineer",
       "url": "",
       "startDate": "2025-09-01",
-      "endDate": "Present",
-      "summary": "Implementing Java + GraphQL backend for workflow automation platform in GCP environment.",
-      "highlights": ["Java + GraphQL backend development", "GCP cloud infrastructure", "Workflow automation platform"]
+      "endDate": "2026-09",
+      "summary": "Worked with the team to create a workflow platform with its own expression language.",
+      "highlights": ["Workflow platform development", "Platform with its own expression language", "Java + GraphQL backend development", "GCP cloud infrastructure"]
     },
     {
       "name": "Capgemini",
@@ -79,7 +87,16 @@
       "location": "Warsaw, Poland",
       "url": "https://www.pw.edu.pl/",
       "area": "Data Science - Faculty of Mathematics and Information Science",
-      "studyType": "Bachelor's Degree",
+      "studyType": "Master's Degree",
+      "startDate": "2026",
+      "endDate": "Present"
+    },
+    {
+      "institution": "Warsaw University of Technology",
+      "location": "Warsaw, Poland",
+      "url": "https://www.pw.edu.pl/",
+      "area": "Data Science - Faculty of Mathematics and Information Science",
+      "studyType": "Bachelor's Degree (completed)",
       "startDate": "2022-10-01",
       "endDate": "2026-02-01",
       "score": "4.5",
@@ -89,12 +106,24 @@
   ],
   "projects": [
     {
+      "name": "Mi-Crow",
+      "summary": "Co-developed a Python library for mechanistic interpretability of large language models as my engineering thesis at Warsaw University of Technology, with Hubert Kowalski.",
+      "highlights": [
+        "Sparse autoencoder training (TopK and L1)",
+        "Activation analysis and hooks",
+        "Concept discovery and model steering",
+        "Unified Hugging Face model interface",
+        "Python, PyTorch, and Transformers"
+      ],
+      "url": "https://github.com/mi-crow-team/Mi-Crow"
+    },
+    {
       "name": "xLungs",
-      "summary": "Fullstack development of a medical imaging and healthcare platform for radiologists, implementing both frontend and backend components for CT image processing, organ segmentation, and report generation.",
-      "highlights": ["Fullstack web application development", "Frontend and backend implementation", "Medical imaging platform", "CT scan processing pipeline", "Organ segmentation system", "Report rendering"],
+      "summary": "Created a Java + React fullstack application that performed inference for the xLungs medical imaging model, supporting CT image processing, organ segmentation, and report generation for radiologists.",
+      "highlights": ["Java Spring backend", "React TypeScript frontend", "Model inference integration", "Multistep inference pipeline with RabbitMQ", "GPU-powered Kubernetes deployment", "CT image processing and report generation"],
       "startDate": "2024-10-01",
       "endDate": "2025-06-01",
-      "url": "https://github.com/AdamKaniasty"
+      "url": "/projects/xlungs/"
     },
     {
       "name": "APPI Synapse",
@@ -106,8 +135,8 @@
     },
     {
       "name": "APPI Marketplace",
-      "summary": "AI-driven expert marketplace web app with fine-tuned GPT models for context-based responses and knowledge discovery.",
-      "highlights": ["Built GPT-based expert system", "Deployed with FastAPI and Docker"],
+      "summary": "AI agent platform designed for technical and engineering documents, with a focus on advanced, reliable retrieval and document-grounded responses.",
+      "highlights": ["Knowledge graph-based RAG for document retrieval", "Context retrieval and evaluation for AI agents", "LlamaIndex, LangChain, and Pinecone", "FastAPI backend deployed on Azure"],
       "startDate": "2023-02-01",
       "endDate": "2025-02-01",
       "url": "https://github.com/AdamKaniasty"
