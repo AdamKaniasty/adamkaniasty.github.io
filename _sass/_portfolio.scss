@@ -51,55 +51,57 @@ button:focus-visible {
   height: auto;
 }
 
-// al_folio_core v1.2 only defines .navbar-expand-sm; define .navbar-expand-lg
-// so laptops/desktops (>= 992px) show the full horizontal navbar while narrow
-// tablets and phones collapse cleanly into the menu toggle.
-@media (min-width: 992px) {
-  .navbar-expand-lg .navbar-collapse {
-    display: flex !important;
-    flex-basis: auto;
-    width: auto;
-  }
-
-  .navbar-expand-lg .navbar-nav {
-    flex-direction: row;
-  }
-
-  .navbar-expand-lg .navbar-nav .dropdown-menu {
-    position: absolute;
-  }
-
-  .navbar-expand-lg .navbar-nav .nav-link {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
-  }
-
-  .navbar-expand-lg .navbar-toggler {
-    display: none;
-  }
-}
-
-@media (max-width: 991.98px) {
-  .navbar-expand-lg {
-    > .container {
-      padding-right: 0;
-      padding-left: 0;
+// al_folio_core v1.2 only defines .navbar-expand-sm inside @layer components;
+// define .navbar-expand-lg in the same @layer components so its `display: flex !important`
+// overrides Tailwind's layered `.collapse { display: none !important }` at >= 992px.
+@layer components {
+  @media (min-width: 992px) {
+    .navbar-expand-lg .navbar-collapse {
+      display: flex !important;
+      flex-basis: auto;
+      width: auto;
     }
 
-    .navbar-toggler-main {
-      margin-left: auto;
+    .navbar-expand-lg .navbar-nav {
+      flex-direction: row;
     }
 
-    .navbar-collapse-main {
-      text-align: left;
+    .navbar-expand-lg .navbar-nav .dropdown-menu {
+      position: absolute;
     }
 
-    .navbar-menu-list {
-      margin-left: 0;
-      align-items: flex-start;
-      width: 100%;
+    .navbar-expand-lg .navbar-nav .nav-link {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      padding-right: 0.5rem;
+      padding-left: 0.5rem;
+    }
+
+    .navbar-expand-lg .navbar-toggler {
+      display: none;
+    }
+  }
+
+  @media (max-width: 991.98px) {
+    .navbar-expand-lg {
+      > .container {
+        padding-right: 0;
+        padding-left: 0;
+      }
+
+      .navbar-toggler-main {
+        margin-left: auto;
+      }
+
+      .navbar-collapse-main {
+        text-align: left;
+      }
+
+      .navbar-menu-list {
+        margin-left: 0;
+        align-items: flex-start;
+        width: 100%;
+      }
     }
   }
 }
