@@ -26,7 +26,7 @@ module PortfolioSeo
       pages = site.pages + site.collections.values.flat_map(&:docs)
       pages.each do |page|
         next unless page.data["layout"]
-        if page.data["layout"].start_with?("archive-")
+        if page.data["layout"] == "archive" || page.data["layout"].start_with?("archive-")
           page.data["noindex"] = true
           page.data["sitemap"] = false
           page.data["title"] = "Blog archive: #{page.url.split('/').last}"
