@@ -2,7 +2,7 @@
 layout: default
 permalink: /blog/
 title: Blog
-description: Technical talks and notes by Adam Kaniasty, including a Polish-language recording about enterprise RAG systems.
+description: Technical posts, notes, and talks by Adam Kaniasty on AI agents, Agents CLI, and enterprise RAG systems.
 nav: true
 nav_order: 1
 pagination:

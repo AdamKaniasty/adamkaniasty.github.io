@@ -1,4 +1,5 @@
 require "json"
+require "time"
 
 module PortfolioSeo
   class Generator < Jekyll::Generator
@@ -28,8 +29,8 @@ module PortfolioSeo
         if page.data["layout"].start_with?("archive-")
           page.data["noindex"] = true
           page.data["sitemap"] = false
-          page.data["title"] = "Talk archive: #{page.url.split('/').last}"
-          page.data["description"] = "Archived technical talks by Adam Kaniasty. Browse the talks page for recordings and mentoring activities."
+          page.data["title"] = "Blog archive: #{page.url.split('/').last}"
+          page.data["description"] = "Archived blog posts and technical talks by Adam Kaniasty."
         end
         url = "#{origin}#{page.url.sub(/index\.html$/, '')}"
         title = page.data["seo_title"] || (page.url == "/" ? "#{basics['name']} — Software Engineer, AI & Machine Learning" : "#{page.data['title']} | #{basics['name']}")
@@ -49,6 +50,51 @@ module PortfolioSeo
           work["programmingLanguage"] = page.data["programming_languages"] if page.data["github"] && page.data["programming_languages"]
           webpage["mainEntity"] = { "@id" => work["@id"] }
           graph << work
+        end
+        if page.respond_to?(:collection) && page.collection.label == "posts"
+          published = page.date.respond_to?(:iso8601) ? page.date.iso8601 : Time.parse(page.date.to_s).iso8601
+          modified_raw = page.data["last_updated"] || page.date
+          modified = modified_raw.respond_to?(:iso8601) ? modified_raw.iso8601 : Time.parse(modified_raw.to_s).iso8601
+          post = {
+            "@type" => "BlogPosting",
+            "@id" => "#{url}#article",
+            "mainEntityOfPage" => { "@id" => "#{url}#webpage" },
+            "headline" => page.data["title"],
+            "description" => description,
+            "url" => url,
+            "image" => page.data["seo_image"],
+            "datePublished" => published,
+            "dateModified" => modified,
+            "inLanguage" => page.data["lang"] || "en",
+            "author" => { "@id" => person_id },
+            "publisher" => { "@id" => person_id },
+            "isPartOf" => { "@id" => "#{origin}/blog/#webpage" }
+          }
+          tags = Array(page.data["tags"]).reject(&:empty?)
+          post["keywords"] = tags.join(", ") unless tags.empty?
+          categories = Array(page.data["categories"]).reject(&:empty?)
+          post["articleSection"] = categories.first unless categories.empty?
+          if page.data["about"].is_a?(Array) && !page.data["about"].empty?
+            post["about"] = page.data["about"].map do |entity|
+              node = { "@type" => entity["type"] || "Thing", "name" => entity.fetch("name") }
+              node["url"] = entity["url"] if entity["url"]
+              node["sameAs"] = entity["sameAs"] if entity["sameAs"]
+              node
+            end
+          end
+          if page.data["is_based_on"].is_a?(Hash)
+            source = page.data["is_based_on"]
+            based_on = { "@type" => source["type"] || "BlogPosting", "name" => source.fetch("name"), "url" => source.fetch("url") }
+            if source["author_name"]
+              author_node = { "@type" => "Person", "name" => source["author_name"] }
+              author_node["url"] = source["author_url"] if source["author_url"]
+              based_on["author"] = author_node
+            end
+            based_on["datePublished"] = source["date_published"].to_s if source["date_published"]
+            post["isBasedOn"] = based_on
+          end
+          webpage["mainEntity"] = { "@id" => post["@id"] }
+          graph << post
         end
         if page.data["research_index"]
           articles = site.data.fetch("research").map do |paper|
@@ -70,6 +116,8 @@ module PortfolioSeo
           crumbs = [{ "@type" => "ListItem", "position" => 1, "name" => "Adam Kaniasty", "item" => "#{origin}/" }]
           if page.url.start_with?("/projects/") && page.url != "/projects/"
             crumbs << { "@type" => "ListItem", "position" => 2, "name" => "Projects", "item" => "#{origin}/projects/" }
+          elsif page.url.start_with?("/blog/") && page.url != "/blog/"
+            crumbs << { "@type" => "ListItem", "position" => 2, "name" => "Blog", "item" => "#{origin}/blog/" }
           end
           crumbs << { "@type" => "ListItem", "position" => crumbs.length + 1, "name" => page.data["title"], "item" => url }
           graph << { "@type" => "BreadcrumbList", "@id" => "#{url}#breadcrumbs", "itemListElement" => crumbs }

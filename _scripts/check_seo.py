@@ -148,6 +148,14 @@ for route, page in pages.items():
         if route != "/" and route in indexed:
             crumbs = [node for node in nodes if node.get("@type") == "BreadcrumbList"]
             check(len(crumbs) == 1, f"{route}: missing breadcrumb schema")
+        if route.startswith("/blog/") and route != "/blog/" and route in indexed:
+            articles = [node for node in nodes if node.get("@type") == "BlogPosting"]
+            check(len(articles) == 1, f"{route}: missing BlogPosting schema")
+            if articles:
+                check(bool(articles[0].get("headline")) and bool(articles[0].get("datePublished")), f"{route}: incomplete BlogPosting metadata")
+                check(articles[0].get("author", {}).get("@id") == origin + "/#person", f"{route}: BlogPosting author mismatch")
+            check(page.meta.get("og:type") == "article", f"{route}: expected og:type=article")
+            check(bool(page.meta.get("article:published_time")), f"{route}: missing article:published_time")
     for image in page.images:
         check("alt" in image, f"{route}: missing image alt")
         check(image.get("alt") != "personal/me.jpg", f"{route}: filename portrait alt")
