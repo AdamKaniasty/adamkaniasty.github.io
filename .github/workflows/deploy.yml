@@ -13,6 +13,7 @@ on:
       - "**.js"
       - "**.liquid"
       - "**.py"
+      - "_plugins/**"
       - "robots.txt"
       - "**/*.md"
       - "**.yml"
@@ -43,6 +44,7 @@ on:
       - "**.js"
       - "**.liquid"
       - "**.py"
+      - "_plugins/**"
       - "robots.txt"
       - "**/*.md"
       - "**.yml"
@@ -76,7 +78,7 @@ jobs:
       - name: Setup Ruby 💎
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.3.5"
+          ruby-version: "3.3"
           bundler-cache: true
       - name: Setup Python 🐍
         uses: actions/setup-python@v5
